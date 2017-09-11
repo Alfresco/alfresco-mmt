@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>alfresco-mmt</artifactId>
     <name>Alfresco Module Management Tool</name>
-    <version>5.3-SNAPSHOT</version>
+    <version>6.0</version>
     <packaging>jar</packaging>
 
     <parent>
@@ -15,7 +15,7 @@
         <connection>scm:git:git@github.com:Alfresco/alfresco-mmt.git</connection>
         <developerConnection>scm:git:git@github.com:Alfresco/alfresco-mmt.git</developerConnection>
         <url>https://github.com/Alfresco/alfresco-mmt</url>
-        <tag>HEAD</tag>
+        <tag>alfresco-mmt-6.0</tag>
     </scm>
 
     <distributionManagement>
