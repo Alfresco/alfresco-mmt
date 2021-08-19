@@ -30,7 +30,7 @@
     </distributionManagement>
 
     <properties>
-        <dependency.alfresco-repository.version>6.0</dependency.alfresco-repository.version>
+        <dependency.alfresco-repository.version>11.109</dependency.alfresco-repository.version>
         <dependency.truezip.version>7.7.9</dependency.truezip.version>
     </properties>
 
