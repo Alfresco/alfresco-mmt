@@ -1,0 +1,37 @@
+---
+dist: focal
+language: java
+jdk: openjdk11
+
+addons:
+  artifacts: true
+
+branches:
+  only:
+    - master
+    - /release\/.*/
+    - /feature\/.*/
+    - /fix\/.*/
+
+env:
+  global:
+    - RELEASE_VERSION=6.1
+    - DEVELOPMENT_VERSION=6.2-SNAPSHOT
+
+stages:
+  - name: build
+  - name: release
+    if: commit_message =~ /\[release\]/ AND (branch = master OR branch =~ /release\/.*/) AND type != pull_request AND fork = false
+
+jobs:
+  include:
+    - name: "Build"
+      stage: build
+      script:
+        - mvn --batch-mode clean install
+      after_script:
+        - artifacts upload target/*.jar
+    - name: "Release"
+      stage: release
+      before_script: bash scripts/travis/verify_release_tag.sh
+      script: travis_wait 60 bash scripts/travis/maven_release.sh
