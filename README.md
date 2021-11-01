@@ -1,12 +1,11 @@
+# Archived
+This project is now archived, as the Alfresco Module Management Tool is now created as part of the
+alfresco-communiy-repo project from which all the Alfresco specific classes are extracted.
+
 ### Alfresco Module Management Tool
 The Module Management Tool (MMT) helps install and manage modules packaged as AMP (Alfresco Module Package) files. These AMP files are applied to a target WAR file, for example, alfresco.war or share.war.
 The source code contains packaging configuration required to build the executable jar.
 
-### Building
-The project can be built by running Maven command:
-~~~
-mvn clean install
-~~~
 
 ### Artifacts
 The artifacts can be obtained by:
